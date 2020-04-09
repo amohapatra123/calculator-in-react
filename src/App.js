@@ -1,24 +1,24 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Main from './component/main';
+import {Navbar,NavbarBrand} from 'reactstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+    <Navbar color="primary">
+    <NavbarBrand href="#" id="head"><h4>Calculator</h4></NavbarBrand>
+    </Navbar>
+    <div className="container mt-5" id="app">
+    
+    <div className="row">
+    <div className="col-md-8 offset-md-2">
+<Main></Main>
+    </div>
+    </div>
+    </div>
     </div>
   );
 }
